@@ -1,13 +1,18 @@
-let count = 0;
+function calcAllinString (str) {
+    const probil = str.split(' ').length - 1;
+    const punctu = [".", ",", "-", "!", "?", "'"];
+    const numerLetter = str.length - probil;
 
-function cc(card) {
-  
 
 
-
-  return "Change Me";
- 
+    const allPropety = {
+        "number of letters": numerLetter,
+        "probils": probil,
+    }
+    return allPropety
 }
 
-cc(2); cc(3); cc(7); cc('K'); cc('A');
+console.log(calcAllinString("Do you love eat?"))
+
+
 
