@@ -1,9 +1,8 @@
 function calcAllinString (str) {
     const probil = str.split(' ').length - 1;
-    const punctu = [".", ",", "-", "!", "?", "'"];
+    const punctuation = [".", ",", "-", "!", "?", "'"];
     const numerLetter = str.length - probil;
-
-
+    
 
     const allPropety = {
         "number of letters": numerLetter,
@@ -12,7 +11,7 @@ function calcAllinString (str) {
     return allPropety
 }
 
-console.log(calcAllinString("Do you love eat?"))
+console.log(calcAllinString("Do you love eat 1?"))
 
 
 
