@@ -18,5 +18,10 @@ function calcPowerNumber(a, n){   //цикл
  }
  console.log(calcPowerRecurs(3, 3))
 
-  //---------------------------------
-
+  //------------------------------------------------------------
+// рандомне число в певному діапазоні
+function randomRange(myMin, myMax) {
+  return   Math.floor(Math.random() * (myMax - myMin + 1)) + myMin ;
+}
+console.log(randomRange(4, 18));
+//------------------------------------------------------------
