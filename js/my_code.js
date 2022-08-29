@@ -9,7 +9,7 @@ function calcPowerNumber(a, n){   //циклом
   }
   console.log(calcSumm(12, 0))
 
-  function calcPowerRecurs (a, n){  //рукурсія
+  function calcPowerRecurs (a, n){  //рекурсія
     if(n === 1){
      return a
     } else {
