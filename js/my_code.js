@@ -1,6 +1,6 @@
 //! Pахує n степіль від числа a
 
-function calcPowerNumber(a, n){   //циклом
+function calcPowerNumber(a, n){   //цикл
     let recolt = 1
     for(let i = 0; i < n; i++){
       recolt *= a
