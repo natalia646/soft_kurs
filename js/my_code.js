@@ -1,4 +1,4 @@
-//! Pахує n степіль від числа a
+//! Рукурсія
 
 function calcPowerNumber(a, n){   //циклом
     let recolt = 1
@@ -18,5 +18,38 @@ function calcPowerNumber(a, n){   //циклом
  }
  console.log(calcPowerRecurs(3, 3))
 
-  //---------------------------------
+ //факторіал рахує рекурсією
+function calcFactorial(n){
+  if(n === 1 ){
+    return 1
+  }else{
+    return n * calcFactorial(n-1)
+  }
+}
+console.log(calcFactorial(4))
 
+
+function calc_Factorial(n){
+  if(n === -1){
+   return -1
+  }else{
+    return n * calc_Factorial(n + 1)
+  }
+}
+
+console.log(calc_Factorial(-3))
+
+  //---------------------------------
+//! Loops while and do..while
+
+let age = prompt("Enter age")
+while (isNaN(age)) {
+  age = prompt("Enter age")
+}
+
+let ageName;
+do{
+   ageName = prompt("Enter age")
+} while(isNaN(ageName))
+
+//------------------------------------------

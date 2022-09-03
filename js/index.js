@@ -1,20 +1,29 @@
-
-
-
-
-// function calcAllinString (str) {
-//     const probil = str.split(' ').length - 1;
-//     const punctuation = [".", ",", "-", "!", "?", "'"];
-//     const numerLetter = str.length - probil;
-    
-
-//     const allPropety = {
-//         "number of letters": numerLetter,
-//         "probils": probil,
+// function padIt(str, n) {
+//   while (n > 0) {
+//     if (n % 2 === 0) {
+//       str = str + "*";
+//     } else {
+//       str = "*" + str;
 //     }
-//     return allPropety
+//     n--;
+//   }
+//   return str
 // }
 
-// console.log(calcAllinString("Do you love eat 1?"))
+// console.log(padIt("a", 3));
+
+// function nameS (str, k){
+// while ( k > 0){
+//   str = "cool" + str;
+//   k--;
+// }
+// return str
+// }
+
+
+
+const cars = ["cat", "car"];
+cars[1] = "dog";
+console.log(cars);
 
 
