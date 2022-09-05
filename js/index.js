@@ -20,32 +20,30 @@
 // return str
 // }
 
-
-
 // const cars = ["cat", "car"];
 // cars[1] = "dog";
 // console.log(cars);
 
+// const nums = [1, 13, 4, 45, 433, 321, 52, 511];
 
-const nums = [1, 13, 4, 45, 433, 321, 52, 511];
 // const compare = (a, b) => a - b;
-// nums.sort(compare);
+// nums.sort(compare).reverse();
+// console.log(nums)
 
 // console.log(nums.filter( nums => nums % 2 === 0 ));
 // console.log(nums.filter( nums => nums % 2 !== 0 ));
 
+"Ваше завдання - відсортувати заданий рядок. Кожне слово в рядку міститиме одне число. Це число є позиція, яку має мати слово в результаті. Примітка. Числа можуть бути від 1 до 9. Отже, 1 буде першим словом (а не 0).
 
-function warnTheSheep(queue) {
-    for( const wolf in queue){
-      if( wolf === queue.length - 1){
-        return "Pls go away and stop eating my sheep"
-     }else {
-       return `Oi! Sheep number ${} ! You are about to be eaten by a wolf!`
-       }
-     }
-   }
+// Якщо вхідний рядок порожній, поверніть порожній рядок. Слова у вхідному рядку будуть містити лише дійсні послідовні числа. Приклад:
 
-   const arr = ["sheep", "wolf", "sheep", "sheep", "sheep", "sheep", 'sheep']
+// ""is2 Thi1s T4est 3a"" --> ""Thi1s is2 3a T4est""
+
+// ""4of Fo1r pe6ople g3ood th5e the2"" --> ""Fo1r the2 g3ood 4of th5e pe6ople""
+
+// """" --> """""
 
 
-  console.log(warnTheSheep(arr))
+
+
+
