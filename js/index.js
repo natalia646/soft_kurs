@@ -92,13 +92,3 @@ const users = [
 // }
 
 
-function calcTax(sum ,procent){
- return sum / 100 * procent
-}
-
-function tax(sum){
-  return sum - calcTax(sum, 1.5) - calcTax(sum, 20)
-}
-
-// console.log(tax(10000))
-
