@@ -37,16 +37,16 @@
 // console.log(myObj.wife.skils[0])
 
 // const users = [
-//   { skils: ["js", "css", ""], id: 1, name: "vasya", status: true, age: 31 },
+//   { skils: ["js", "css", ""], id: 1, name: "vasya", sexus: true, age: 31 },
 //   {
 //     skils: ["js", "css", "java"],
 //     id: 2,
 //     name: "petya",
-//     status: false,
+//     sexus: false,
 //     age: 25,
 //   },
-//   { skils: ["js", "css", "java"], id: 3, name: "anna", status: true, age: 32 },
-//   { skils: ["js", "css", ""], id: 4, name: "olya", status: false, age: 24 },
+//   { skils: ["js", "css", "java"], id: 3, name: "anna", sexus: true, age: 32 },
+//   { skils: ["js", "css", ""], id: 4, name: "olya", sexus: false, age: 24 },
 // ];
 
 // for(let i = 0; i < users.length; i++){
@@ -71,3 +71,34 @@
 //     console.log("You are Fishes");
 //     break;
 // }
+
+const users = [
+  { name: "lisa", age: 23, nation: "Ukrain", sex: "girl" },
+  { name: "nasar", age: 34, nation: "Poland", sex: "boy" },
+  { name: "olya", age: 44, nation: "Ukrian", sex: "girl" },
+  { name: "halya", age: 32, nation: "Poland", sex: "girl" },
+  { name: "sasha", age: 21, nation: "UK", sex: "boy" },
+  { name: "anna", age: 32, nation: "Poland", sex: "girl" },
+  { name: "tanya", age: 21, nation: "UK", sex: "girl" },
+  { name: "oleg", age: 25, nation: "UK", sex: "boy" },
+];
+
+// for (let user of users){
+//     for(let skil in user){
+//        document.write(
+//         `<h3>${skil}: ${user[skil]}</h3>
+//         `)
+//     }
+// }
+
+
+function calcTax(sum ,procent){
+ return sum / 100 * procent
+}
+
+function tax(sum){
+  return sum - calcTax(sum, 1.5) - calcTax(sum, 20)
+}
+
+// console.log(tax(10000))
+

@@ -61,21 +61,28 @@ function checkAction(a, b, action, plus, minus, multiply, divide){
 }
 
 function calcPlus(){
-    let sum =  a + b;
-    alert(sum)
+    alert(a + b)
 }
 function calcMinus(){
-    let difference = a - b;
-    alert(difference)
+    alert(a - b)
 }
 function calcMultiply(){
-   let product = a * b;
-   alert(product)
+   alert(a * b)
 }
 function calcDivide(){
-    let fraction =  a / b;
-    alert(fraction)
+    alert(a / b)
 }
+//----------------------------
+function calcTax(sum ,procent){
+  return sum / 100 * procent
+ }
+ 
+ function tax(sum){
+   return sum - calcTax(sum, 1.5) - calcTax(sum, 20)
+ }
+ 
+ console.log(tax(10000))
+
 //! Loops while and do..while
 
 let age = prompt("Enter age")
