@@ -115,3 +115,47 @@ console.log(true + ""); // boolean in string
 
 console.log(+true); // boolean in number
 console.log(+0)
+
+//! сума улументів масиву
+const numbers = [1, 2, 3, 4, 5, 6];
+
+function sumElemInArr(arr) {
+  let resolt = 0;
+  for (let i = 0; i < numbers.length; i++) {
+    resolt += numbers[i];
+  }
+  return resolt;
+}
+console.log(sumElemInArr(numbers));
+
+function sumElemInArr2(arr) {
+  let sum = 0;
+  for (let num of numbers) {
+    sum += num;
+  }
+  return sum
+}
+console.log(sumElemInArr2(numbers));
+
+//! argumetns
+function calc() {
+  if (arguments.length === 2) {
+    return arguments[0] + arguments[1];
+  } else if (arguments.length === 3) {
+    return arguments[0] + arguments[1] + arguments[2];
+  }
+}
+console.log(calc(2, 4));
+console.log(calc(2, 4, 6));
+
+// рахує довільну кількість аргументів
+function calcSumm() {
+  let resolt = 0;
+  for (let i = 0; i < arguments.length; i++) {
+    resolt += arguments[i];
+  }
+  return resolt;
+}
+
+console.log(calcSumm(1,2,3,5,3,6,7))
+
