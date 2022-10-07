@@ -159,3 +159,152 @@ function calcSumm() {
 
 console.log(calcSumm(1,2,3,5,3,6,7))
 
+//! Функції в обєктах
+const users = [
+  {
+    name: "lisa",
+    age: 23,
+    nation: "Ukrain",
+    sex: "girl",
+    greting: function (msg) {
+      console.log(
+        `Hello! My name is ${this.name}. My age is ${this.age}. And I from ${this.nation}`
+      );
+    },
+    text: function (msg){
+      document.write(`${this.name} from ${this.nation}`)
+    }
+  },
+  {
+    name: "nasar",
+    age: 34,
+    nation: "Poland",
+    sex: "boy",
+    greting: function (msg) {
+      console.log(
+        `Hello! My name is ${this.name}. My age is ${this.age}. And I from ${this.nation}`
+      );
+    },
+    text: function (msg){
+      document.write(`${this.name} from ${this.nation}`)
+    }
+  },
+  {
+    name: "olya",
+    age: 44,
+    nation: "Ukrian",
+    sex: "girl",
+    greting: function (msg) {
+      console.log(
+        `Hello! My name is ${this.name}. My age is ${this.age}. And I from ${this.nation}`
+      );
+    },
+    text: function (msg){
+      document.write(`<h3>${this.name} from ${this.nation}</h3>`)
+    }
+  },
+  {
+    name: "halya",
+    age: 32,
+    nation: "Poland",
+    sex: "girl",
+    greting: function (msg) {
+      console.log(
+        `Hello! My name is ${this.name}. My age is ${this.age}. And I from ${this.nation}`
+      );
+    },
+    text: function (msg){
+      document.write(`${this.name} from ${this.nation}`)
+    }
+  },
+  {
+    name: "sasha",
+    age: 21,
+    nation: "UK",
+    sex: "boy",
+    greting: function (msg) {
+      console.log(
+        `Hello! My name is ${this.name}. My age is ${this.age}. And I from ${this.nation}`
+      );
+    },
+    text: function (msg){
+      document.write(`${this.name} from ${this.nation}`)
+    }
+  },
+  {
+    name: "anna",
+    age: 32,
+    nation: "Poland",
+    sex: "girl",
+    greting: function (msg) {
+      console.log(
+        `Hello! My name is ${this.name}. My age is ${this.age}. And I from ${this.nation}`
+      );
+    },
+    text: function (msg){
+      document.write(`${this.name} from ${this.nation}`)
+    }
+  },
+  {
+    name: "tanya",
+    age: 21,
+    nation: "UK",
+    sex: "girl",
+    greting: function (msg) {
+      console.log(
+        `Hello! My name is ${this.name}. My age is ${this.age}. And I from ${this.nation}`
+      );
+    },
+    text: function (msg){
+      document.write(`${this.name} from ${this.nation}`)
+    }
+  },
+  {
+    name: "oleg",
+    age: 25,
+    nation: "UK",
+    sex: "boy",
+    greting: function (msg) {
+      console.log(
+        `Hello! My name is ${this.name}. My age is ${this.age}. And I from ${this.nation}`
+      );
+    },
+    text: function (msg){
+      document.write(`${this.name} from ${this.nation}`)
+    }
+  },
+];
+
+function mesage (){
+  for(let user of users){
+    user.greting()
+  }
+}
+mesage();
+
+function write(){
+  for(let us of users){
+    us.text()
+  }
+}
+write();
+
+//! методи String
+let str = "Hello World!"
+let str2 = " How are you?"
+
+console.log(str.concat("!!")); // зєднює два рядки
+console.log(str.concat(str2));
+console.log(str.toUpperCase());// всі великі літери
+console.log(str.toLowerCase()); // всі малі літери
+console.log(str.startsWith("W")) // false
+console.log(str.startsWith("Hel")); // true
+console.log(str.endsWith("!")); //true
+console.log(str.substring(0, 4));//
+console.log(str.indexOf("o")); // шукає індекс літери о
+console.log(str.indexOf("o", 5)) ; //шукає індекс літери о, починаючи з 5 позиції
+console.log(str.charAt(6)); // показує літуру, під індуксом 6
+console.log(str.replace("l", "*")); // заміна, до першого входження
+console.log(str.replaceAll('o', '#')); // заміна всіх знайдених
+console.log(str.split(' '));// string переводить у масив за вказано ознакою
+
