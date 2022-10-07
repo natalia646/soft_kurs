@@ -102,12 +102,4 @@ function calc() {
 // console.log(calc(2, 4));
 // console.log(calc(2, 4, 6));
 
-function calcSumm() {
-  let resolt = 0;
-  for (let i = 0; i < arguments.length; i++) {
-    resolt += arguments[i];
-  }
-  return resolt;
-}
 
-console.log(calcSumm(1,2,3,5,3,6,7))
