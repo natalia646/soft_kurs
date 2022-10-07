@@ -92,14 +92,6 @@ const users = [
 // }
 // console.log(...number);
 
-function calc() {
-  if (arguments.length === 2) {
-    return arguments[0] + arguments[1];
-  } else if (arguments.length === 3) {
-    return arguments[0] + arguments[1] + arguments[2];
-  }
-}
-// console.log(calc(2, 4));
-// console.log(calc(2, 4, 6));
+
 
 
