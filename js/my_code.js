@@ -1,99 +1,106 @@
 //! Рукурсія
-function calcPowerNumber(a, n){   //цикл
-    let recolt = 1
-    for(let i = 0; i < n; i++){
-      recolt *= a
-    }
-    return recolt
+function calcPowerNumber(a, n) {
+  //цикл
+  let recolt = 1;
+  for (let i = 0; i < n; i++) {
+    recolt *= a;
   }
-  console.log(calcSumm(12, 0))
+  return recolt;
+}
+console.log(calcSumm(12, 0));
 
-  function calcPowerRecurs (a, n){  //рекурсія
-    if(n === 1){
-     return a
-    } else {
-     return a * calcPowerRecurs(a, n-1)
-    }
- }
- console.log(calcPowerRecurs(3, 3))
-
- //!факторіал рахує рекурсією
-function calcFactorial(n){
-  if(n === 1 ){
-    return 1
-  }else{
-    return n * calcFactorial(n-1)
+function calcPowerRecurs(a, n) {
+  //рекурсія
+  if (n === 1) {
+    return a;
+  } else {
+    return a * calcPowerRecurs(a, n - 1);
   }
 }
-console.log(calcFactorial(4))
+console.log(calcPowerRecurs(3, 3));
 
+//!факторіал рахує рекурсією
+function calcFactorial(n) {
+  if (n === 1) {
+    return 1;
+  } else {
+    return n * calcFactorial(n - 1);
+  }
+}
+console.log(calcFactorial(4));
 
-function calc_Factorial(n){
-  if(n === -1){
-   return -1
-  }else{
-    return n * calc_Factorial(n + 1)
+function calc_Factorial(n) {
+  if (n === -1) {
+    return -1;
+  } else {
+    return n * calc_Factorial(n + 1);
   }
 }
 
-console.log(calc_Factorial(-3))
+console.log(calc_Factorial(-3));
 
-  //------------------------------------------------------------
+//------------------------------------------------------------
 //! рандомне число в певному діапазоні
 function randomRange(myMin, myMax) {
-  return   Math.floor(Math.random() * (myMax - myMin + 1)) + myMin ;
+  return Math.floor(Math.random() * (myMax - myMin + 1)) + myMin;
 }
 console.log(randomRange(4, 18));
 //------------------------------------------------------------
 
 //! використання collback функції
-const enterNum = prompt("Enter the numbers and the action separated by commas").split(",");
- const action = enterNum[2];
- const a = +enterNum[0];
- const b = +enterNum[1];
+const enterNum = prompt(
+  "Enter the numbers and the action separated by commas"
+).split(",");
+const action = enterNum[2];
+const a = +enterNum[0];
+const b = +enterNum[1];
 
-function checkAction(a, b, action, plus, minus, multiply, divide){
-    action == "+" ? plus():
-    action == "-" ? minus():
-    action == "*" ? multiply():
-    action == "/" ? divide():
-    null
+function checkAction(a, b, action, plus, minus, multiply, divide) {
+  action == "+"
+    ? plus()
+    : action == "-"
+    ? minus()
+    : action == "*"
+    ? multiply()
+    : action == "/"
+    ? divide()
+    : null;
 }
 
-function calcPlus(){
-    alert(a + b)
+function calcPlus() {
+  alert(a + b);
 }
-function calcMinus(){
-    alert(a - b)
+function calcMinus() {
+  alert(a - b);
 }
-function calcMultiply(){
-   alert(a * b)
+function calcMultiply() {
+  alert(a * b);
 }
-function calcDivide(){
-    alert(a / b)
+function calcDivide() {
+  alert(a / b);
 }
 //----------------------------
-function calcTax(sum ,procent){
-  return sum / 100 * procent
- }
- 
- function tax(sum){
-   return sum - calcTax(sum, 1.5) - calcTax(sum, 20)
- }
- 
- console.log(tax(10000))
+function calcTax(sum, procent) {
+  return (sum / 100) * procent;
+}
+
+function tax(sum) {
+  return sum - calcTax(sum, 1.5) - calcTax(sum, 20);
+}
+
+console.log(tax(10000));
 
 //! Loops while and do..while
 
-let age = prompt("Enter age")
+let age = prompt("Enter age");
 while (isNaN(age)) {
-  age = prompt("Enter age")
+  age = prompt("Enter age");
 }
 
 let ageName;
-do{
-   ageName = prompt("Enter age")
-} while(isNaN(ageName))
+do {
+  ageName = prompt("Enter age");
+} while (isNaN(ageName));
 
 //------------------------------------------
 //!перетворення типів
@@ -101,22 +108,21 @@ console.log(100 + ""); //number in string
 console.log(200 + 100 + "");
 console.log("" + 100 + 20);
 
-console.log(+"123");  //string in number
+console.log(+"123"); //string in number
 console.log(parseInt("123djjd53"));
 console.log(parseFloat("145.45kskk"));
-
 
 console.log(!!-100); //number in boolean
 console.log(!!0);
 console.log(!!"shfj"); //string in boolean
-console.log(!!'');
+console.log(!!"");
 
 console.log(true + ""); // boolean in string
 
 console.log(+true); // boolean in number
-console.log(+0)
+console.log(+0);
 
-//! сума улументів масиву
+//! сума елементів масиву
 const numbers = [1, 2, 3, 4, 5, 6];
 
 function sumElemInArr(arr) {
@@ -133,7 +139,7 @@ function sumElemInArr2(arr) {
   for (let num of numbers) {
     sum += num;
   }
-  return sum
+  return sum;
 }
 console.log(sumElemInArr2(numbers));
 
@@ -157,7 +163,7 @@ function calcSumm() {
   return resolt;
 }
 
-console.log(calcSumm(1,2,3,5,3,6,7))
+console.log(calcSumm(1, 2, 3, 5, 3, 6, 7));
 
 //! Функції в обєктах
 const users = [
@@ -171,9 +177,9 @@ const users = [
         `Hello! My name is ${this.name}. My age is ${this.age}. And I from ${this.nation}`
       );
     },
-    text: function (msg){
-      document.write(`${this.name} from ${this.nation}`)
-    }
+    text: function (msg) {
+      document.write(`${this.name} from ${this.nation}`);
+    },
   },
   {
     name: "nasar",
@@ -185,9 +191,9 @@ const users = [
         `Hello! My name is ${this.name}. My age is ${this.age}. And I from ${this.nation}`
       );
     },
-    text: function (msg){
-      document.write(`${this.name} from ${this.nation}`)
-    }
+    text: function (msg) {
+      document.write(`${this.name} from ${this.nation}`);
+    },
   },
   {
     name: "olya",
@@ -199,9 +205,9 @@ const users = [
         `Hello! My name is ${this.name}. My age is ${this.age}. And I from ${this.nation}`
       );
     },
-    text: function (msg){
-      document.write(`<h3>${this.name} from ${this.nation}</h3>`)
-    }
+    text: function (msg) {
+      document.write(`<h3>${this.name} from ${this.nation}</h3>`);
+    },
   },
   {
     name: "halya",
@@ -213,9 +219,9 @@ const users = [
         `Hello! My name is ${this.name}. My age is ${this.age}. And I from ${this.nation}`
       );
     },
-    text: function (msg){
-      document.write(`${this.name} from ${this.nation}`)
-    }
+    text: function (msg) {
+      document.write(`${this.name} from ${this.nation}`);
+    },
   },
   {
     name: "sasha",
@@ -227,9 +233,9 @@ const users = [
         `Hello! My name is ${this.name}. My age is ${this.age}. And I from ${this.nation}`
       );
     },
-    text: function (msg){
-      document.write(`${this.name} from ${this.nation}`)
-    }
+    text: function (msg) {
+      document.write(`${this.name} from ${this.nation}`);
+    },
   },
   {
     name: "anna",
@@ -241,9 +247,9 @@ const users = [
         `Hello! My name is ${this.name}. My age is ${this.age}. And I from ${this.nation}`
       );
     },
-    text: function (msg){
-      document.write(`${this.name} from ${this.nation}`)
-    }
+    text: function (msg) {
+      document.write(`${this.name} from ${this.nation}`);
+    },
   },
   {
     name: "tanya",
@@ -255,9 +261,9 @@ const users = [
         `Hello! My name is ${this.name}. My age is ${this.age}. And I from ${this.nation}`
       );
     },
-    text: function (msg){
-      document.write(`${this.name} from ${this.nation}`)
-    }
+    text: function (msg) {
+      document.write(`${this.name} from ${this.nation}`);
+    },
   },
   {
     name: "oleg",
@@ -269,42 +275,74 @@ const users = [
         `Hello! My name is ${this.name}. My age is ${this.age}. And I from ${this.nation}`
       );
     },
-    text: function (msg){
-      document.write(`${this.name} from ${this.nation}`)
-    }
+    text: function (msg) {
+      document.write(`${this.name} from ${this.nation}`);
+    },
   },
 ];
 
-function mesage (){
-  for(let user of users){
-    user.greting()
+function mesage() {
+  for (let user of users) {
+    user.greting();
   }
 }
 mesage();
 
-function write(){
-  for(let us of users){
-    us.text()
+function write() {
+  for (let us of users) {
+    us.text();
   }
 }
 write();
 
 //! методи String
-let str = "Hello World!"
-let str2 = " How are you?"
+let str = "Hello World!";
+let str2 = " How are you?";
 
 console.log(str.concat("!!")); // зєднює два рядки
 console.log(str.concat(str2));
-console.log(str.toUpperCase());// всі великі літери
+console.log(str.toUpperCase()); // всі великі літери
 console.log(str.toLowerCase()); // всі малі літери
-console.log(str.startsWith("W")) // false
+console.log(str.startsWith("W")); // false
 console.log(str.startsWith("Hel")); // true
 console.log(str.endsWith("!")); //true
-console.log(str.substring(0, 4));//
+console.log(str.substring(0, 4)); //
 console.log(str.indexOf("o")); // шукає індекс літери о
-console.log(str.indexOf("o", 5)) ; //шукає індекс літери о, починаючи з 5 позиції
+console.log(str.indexOf("o", 5)); //шукає індекс літери о, починаючи з 5 позиції
 console.log(str.charAt(6)); // показує літуру, під індуксом 6
 console.log(str.replace("l", "*")); // заміна, до першого входження
-console.log(str.replaceAll('o', '#')); // заміна всіх знайдених
-console.log(str.split(' '));// string переводить у масив за вказано ознакою
+console.log(str.replaceAll("o", "#")); // заміна всіх знайдених
+console.log(str.split(" ")); // string переводить у масив за вказано ознакою
 
+
+//!  методи Array
+const usersSmal = [
+  {
+    name: "anna",
+    age: 32,
+    nation: "Poland",
+    sex: "girl",
+  },
+  {
+    name: "tanya",
+    age: 21,
+    nation: "UK",
+    sex: "girl",
+  },
+  {
+    name: "vira",
+    age: 24,
+    nation: "UK",
+    sex: "girl",
+  },
+];
+
+const nawAge = users.filter((value) => value.age > 22);             // filter
+const name = age.forEach((value) => console.log(value.name));       // forEach
+const maped2 = users.map((value,index) => {                         // map
+  return { ...value, id: index + 1 };
+});
+console.log(maped2)
+console.log(users.find((value) => value.nation === "UK"));          // find
+console.log(users.every(value => value.age < 20));                  // every
+console.log(users.some(value => value.age > 30))                    // some
