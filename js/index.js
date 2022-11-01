@@ -1,3 +1,5 @@
+
+
 const users = [
   {
     name: "anna",
@@ -20,5 +22,3 @@ const users = [
 ];
 
 
-console.log(users.every(value => value.age < 20));
-console.log(users.some(value => value.age > 30))

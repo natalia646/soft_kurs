@@ -342,6 +342,12 @@ const name = age.forEach((value) => console.log(value.name));       // forEach
 const maped2 = users.map((value,index) => {                         // map
   return { ...value, id: index + 1 };
 });
+const newUsers = users.map(function(value, index){
+  return {
+    name: value.name,
+    id: index + 1,  
+  }
+})
 console.log(maped2)
 console.log(users.find((value) => value.nation === "UK"));          // find
 console.log(users.every(value => value.age < 20));                  // every
