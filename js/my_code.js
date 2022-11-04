@@ -45,6 +45,8 @@ function randomRange(myMin, myMax) {
   return Math.floor(Math.random() * (myMax - myMin + 1)) + myMin;
 }
 console.log(randomRange(4, 18));
+
+
 //------------------------------------------------------------
 
 //! використання collback функції
@@ -164,6 +166,10 @@ function calcSumm() {
 }
 
 console.log(calcSumm(1, 2, 3, 5, 3, 6, 7));
+
+//кращий метод додати невідому кітькість аргументів
+const sum = (...arg) => arg.reduce((a, b) => a + b, 0);
+console.log(sum(1, 2, 3, 7, 9))
 
 //! Функції в обєктах
 const users = [
@@ -352,3 +358,44 @@ console.log(maped2)
 console.log(users.find((value) => value.nation === "UK"));          // find
 console.log(users.every(value => value.age < 20));                  // every
 console.log(users.some(value => value.age > 30))                    // some
+
+
+//! Конструктори
+function User (name, age, status){   // конструктор - Функція що визначає характеристики обєкта
+  this.name = name;
+  this.age = age;
+  this.status = status;
+  this.greting = function(){       // використю ф-ю
+    console.log(`Hi ${this.name}`)
+  } 
+}
+
+ const user1 = new User("nata", 22, true)    //new створює новий обєкт
+console.log(user1)
+user1.greting()
+ const user2 = new User("anna", 24, false)
+ console.log(user2)
+ user2.greting()
+
+
+// якщо в обєкті повинен бути ще обєктб то використовуємо: 
+ function Users (name, age, status, frend){   //композицію
+  this.name = name;
+  this.age = age;
+  this.status = status;
+  this.frend = frend
+  console.log(this)
+}
+ const users1 = new Users("nata", 22, true, {name: "iva", age: 23})    
+
+ function Userss (name, age, status, frendName, frendAge){   //агрегацію
+  this.name = name;
+  this.age = age;
+  this.status = status;
+  this.frend = {name: frendName, age: frendAge}
+  console.log(this)
+}
+ const userss1 = new Userss("nata", 22, true, 'iva', 24);
+
+
+ 

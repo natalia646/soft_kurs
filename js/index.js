@@ -1,3 +1,9 @@
+import * as myModule from "./module.js";
+import calcSumm from "./module.js"
+
+console.log(myModule.calcFactorial(5))
+console.log(myModule.randomRange(23, 34))
+console.log(calcSumm(2, 4, 5))
 
 
 const users = [
@@ -20,5 +26,3 @@ const users = [
     sex: "girl",
   },
 ];
-
-
