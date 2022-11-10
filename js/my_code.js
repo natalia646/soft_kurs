@@ -398,4 +398,83 @@ user1.greting()
  const userss1 = new Userss("nata", 22, true, 'iva', 24);
 
 
+//! Object and OOP
+function beep(){
+  console.log(`${this.make} ${this.modal} beep-beep`)
+}
+const teslaX = {};
+teslaX.make = "Tesla";
+teslaX.model = "X";
+teslaX.prise = 90000;
+teslaX.beep = beep;
+
+console.log(teslaX);
+teslaX.beep();
+
+
+const miniCooper = {
+make: 'Mini',
+modal: 'Cooper',
+prise: 40000,
+beep: beep,
+}
+console.log(miniCooper);
+miniCooper.beep()
+
+// конструктор
+function Car(make, modal, prise){
+this.make = make;
+this.modal = modal;
+this.prise = prise;
+this.beep =  function(){
+  console.log(`${this.make} ${this.modal} beep-beep`)
+}
+}
+
+const porschPanamera = new Car('Porsch', 'panamera', 150000);
+const fordMustang = new Car('Ford', 'Mustang', 200000);
+
+// клас
+class SuperCar{
+constructor(make, modal, prise){
+  this.make = make;
+  this.modal = modal;
+  this.prise = prise;
+}
+beep(){
+  console.log(`Super car ${this.make} ${this.modal} beep-beep`)
+}
+}
+
+const ferariLa = new SuperCar('Fereri', 'La', 200000)
+console.log(ferariLa)
+console.log(fordMustang)
+
+class EVSuserCar extends SuperCar{              // наслідування
+constructor(make, modal, prise, battery){
+  super(make, modal, prise);
+  this.battery = battery;
+}
+beep(){
+  super.beep();
+  console.log(`Battery ${this.battery}`)
+}
+}
+
+const hummerEV = new EVSuserCar('GM', 'Hummer', 150000, 42);
+console.log(hummerEV)
+hummerEV.beep();
+
+
+//! JSON
+const miniCooperJSON = `{
+"make": "'Mini",
+"modal": "Cooper",
+"prise": 40000
+}`;
+
+const miniCooperFromJSON = JSON.parse(miniCooperJSON);
+console.log(miniCooperFromJSON);
+miniCooperFromJSON.beep = beep;
+miniCooperFromJSON.beep()
  

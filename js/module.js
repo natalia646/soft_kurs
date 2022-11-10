@@ -24,3 +24,4 @@ function calcSumm() {
 
 // export {calcFactorial, randomRange};
 export  default calcSumm
+
