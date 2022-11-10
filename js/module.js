@@ -22,5 +22,5 @@ function calcSumm() {
 
 // console.log(calcSumm(1, 2, 3, 5, 3, 6, 7));
 
-export {calcFactorial, randomRange};
+// export {calcFactorial, randomRange};
 export  default calcSumm
