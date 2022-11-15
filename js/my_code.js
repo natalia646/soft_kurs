@@ -437,7 +437,7 @@ const fordMustang = new Car('Ford', 'Mustang', 200000);
 // клас
 class SuperCar{
 constructor(make, modal, prise){
-  this.make = make;
+  this.make = make;        // назю власними властивостями
   this.modal = modal;
   this.prise = prise;
 }
