@@ -26,32 +26,3 @@ const users = [
   },
 ];
 
-function Dog(name) {
-  this.name = name;
-}
-
-Dog.prototype = {
-  numLegs: 4,
-  eat() {
-    console.log("nom nom nom");
-  },
-  describe() {
-    // console.log("My name is " + this.name);
-  },
-};
-
-Dog.prototype.describe();
-
-function countSheep(n) {
-  let strSheep = "";
-  if (n === 0) {
-    return strSheep;
-  } else {
-    for (let i = 1; i < n + 1; i++) {
-      let newStr = `${i} sheep...`;
-      strSheep += newStr;
-    }
-    return strSheep;
-  }
-}
-
