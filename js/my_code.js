@@ -478,3 +478,16 @@ console.log(miniCooperFromJSON);
 miniCooperFromJSON.beep = beep;
 miniCooperFromJSON.beep()
  
+//! Регулярні вирази
+function findSimilarity(str, word) {
+  const regstr =
+    word[0] + word.slice(1, -1).replace(/./g, ".") + word[word.length - 1];
+  const regex = new RegExp("^" + regstr + "$") || "";
+
+  return str
+    .split(" ")
+    .filter((x) => regex.test(x))
+    .join(" ");
+}
+
+console.log(findSimilarity("bag dog dig dot doog dogs", "dog"));
